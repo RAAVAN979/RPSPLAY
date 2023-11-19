@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ROCK PAPER SCISSOR</title>
+        <meta type="author" name="RAAVAN">
+        <meta charset="utf-8">
+        <meta type="viewport" name="width=device-width, initial-scale=1.0">
+        <style>
+            *{height: 100vh;
+                width: 100vw;
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+                text-decoration: solid;
+                background-color: black;
+                justify-content: center;
+            }
+           header{  margin: 0vh;height: 1vh;
+        
+    }
+    header h1{text-align: center;
+    color: orange; margin-top:2vh;font-family:cursive;}
+    header h3{display:flex;flex-direction: row; gap: 23px;
+        color:orange;letter-spacing: 2px; text-align: center; margin-top: -93vh;}
+           
+            .BUT{display: flex; flex-direction: row 
+                ;justify-content: center; gap: 20vw; text-align: center; margin-top: 30vh;
+                margin-bottom: -65vh; padding: 10vh; }
+            button{border: 2px solid orange;cursor: pointer; border-radius: 40%; background-color: black; color: orange;
+                font-family:cursive; width: 20vw;height: 20vh; }
+            span{color: white; font-size: 25px;}
+            img{max-width: 18vw; height: 18vh; border-radius: 45%;}
+            main div{display:flex;
+                flex-direction: row;
+                gap: 20vw; 
+                position: relative; color: orange; font-family: cursive; font-weight: bold; text-align: center;
+            margin-top: 1vh;
+        height: 10vh;}
+             
+            footer{
+                height: 1vh;
+                color: orange; font-family: cursive; max-width: 100vw;
+                margin-bottom: 0vh;
+                 text-align: center;
+            }
+
+            
+            </style>
+
+    </head>
+    <body>
+        <header>
+            <h1>LETS <span>PLAY!!</span></h1>
+            <h3>ROCK PAPER SCISSOR</h3>
+        </header>
+        <div title="Whats up FUCKER" class="BUT">
+        <button onclick="
+            compMove();
+            let result = '';
+            if (computerMove === 'ROCK') {
+                result = 'TIE';
+            } else if (computerMove === 'PAPER') {
+                result = 'YOU LOOSE';
+            } else if (computerMove === 'SCISSOR') {
+                result = 'YOU WIN'
+            } alert(`YOU PICKED ROCK. COMPUTER PICKED ${computerMove}. ${result} `);
+        
+            "><img src="images.jpg"></button>
+        <button onclick="
+        compMove();
+        let result = '';
+        if (computerMove === 'ROCK') {
+            result = 'YOU LOOSE';
+        } else if (computerMove === 'PAPER') {
+            result = 'TIE';
+        } else if (computerMove === 'SCISSOR') {
+            result = 'YOU WIN';
+        } alert(`YOU PICKED PAPER. COMPUTER PICKED ${computerMove}. ${result} `);
+    
+        "><img src="paper.jpg"></button>
+        <button onclick="
+        compMove();
+        let result = '';
+        if (computerMove === 'ROCK') {
+            result = 'YOU LOOSE';
+        } else if (computerMove === 'PAPER') {
+            result = 'YOU WIN';
+        } else if (computerMove === 'SCISSOR') {
+            result = 'TIE'
+        } alert(`YOU PICKED SCISSOR. COMPUTER PICKED ${computerMove}. ${result} `);
+    
+        "><img src="sci.jpg"></button>
+        </div>
+        <main>
+            <div class="word">
+            <p1>ROCK</p1>
+            <p2>PAPER</p2>
+            <p3>SCISSOR</p3>
+            </div>
+        </main>
+        <footer>
+            <p5>THANK YOU FOR PLAYING</p5>
+            <br>
+            <p4>All @ Copyright Reserved By RAAVAN </p4>
+        </footer>
+        <script>
+            let computerMove = '';
+            function compMove() {
+                const randomNumber = Math.random();
+                if (randomNumber >= 0 && randomNumber < 1 / 3) {
+                    computerMove = 'ROCK';
+                } else if (randomNumber >= 1 / 3 && randomNumber< 2 / 3) {
+                    computerMove = 'PAPER'; } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+                        computerMove = 'SCISSOR';
+                    }
+                }
+                
+
+
+    
+            </script>
+    </body>
+</html>
